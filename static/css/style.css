@@ -1,0 +1,136 @@
+/* Reset & body styling */
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body {
+  font-family: 'Orbitron', sans-serif;
+  background: radial-gradient(circle at 50% 50%, #0b0c1a, #000011);
+  color: #ffffff;
+  overflow-x: hidden;
+  min-height: 100vh;
+}
+
+/* Center logo */
+header {
+  text-align: center;
+  margin: 20px 0;
+}
+header img {
+  width: 120px;
+  border-radius: 50%;
+  box-shadow: 0 0 20px #00ffff88;
+}
+
+/* Container */
+.container {
+  max-width: 500px;
+  margin: 0 auto;
+  padding: 20px;
+  background: rgba(10, 10, 25, 0.8);
+  border-radius: 15px;
+  box-shadow: 0 0 30px #00ffff55;
+  backdrop-filter: blur(5px);
+}
+
+h1 {
+  text-align: center;
+  font-size: 2.2rem;
+  margin-bottom: 20px;
+  color: #00ffff;
+  text-shadow: 0 0 10px #00ffff88;
+}
+
+/* Task input */
+.task-input {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+.task-input input {
+  flex: 1;
+  padding: 10px 15px;
+  border-radius: 8px;
+  border: none;
+  outline: none;
+  font-size: 1rem;
+  background: rgba(255, 255, 255, 0.05);
+  color: #fff;
+}
+.task-input button {
+  padding: 10px 15px;
+  border-radius: 8px;
+  border: none;
+  background: #00ffff;
+  color: #000;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.task-input button:hover {
+  background: #00bbbb;
+}
+
+/* Filter buttons */
+.filters {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+.filter-btn {
+  padding: 5px 12px;
+  border-radius: 6px;
+  border: none;
+  background: #111122;
+  color: #00ffff;
+  cursor: pointer;
+  font-weight: bold;
+  transition: 0.3s;
+}
+.filter-btn:hover {
+  background: #00ffff22;
+  box-shadow: 0 0 10px #00ffff66;
+}
+
+/* Task list */
+#task-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+#task-list li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 15px;
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.05);
+  color: #fff;
+  transition: 0.3s;
+}
+#task-list li.completed {
+  text-decoration: line-through;
+  color: #888;
+  background: rgba(0, 255, 255, 0.1);
+}
+#task-list li button {
+  border: none;
+  background: #ff0055;
+  color: #fff;
+  padding: 5px 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+#task-list li button:hover {
+  background: #ff3366;
+}
+
+/* Stars background canvas */
+canvas#stars {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  width: 100%;
+  height: 100%;
+}
